@@ -1,0 +1,1274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <TextView
+        android:id="@+id/zhuzhai_type"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/fonts_16"
+        android:textColor="@color/green"
+        android:text="面积"
+        />
+     
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="120dp" >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#ddd" />
+                
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="7dp"
+                    android:background="#ddd" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center|center_vertical"
+                    android:layout_marginTop="26dp"
+                    android:text="批准预(销)售面积" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="与上年同期比(%)" />
+                            
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ysYearbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center|center_vertical"
+                                android:text="当月与上月环比增长(%)" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ysMonthbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="60dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ysmj"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+            </RelativeLayout>
+            
+        </LinearLayout>
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="120dp" >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#ddd" />
+                
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="7dp"
+                    android:background="#ddd" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center|center_vertical"
+                    android:layout_marginTop="26dp"
+                    android:text="月末累计可售面积" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="与上年同期比(%)" />
+                            
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ksYearbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center|center_vertical"
+                                android:text="当月与上月环比增长(%)" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ksMonthbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="60dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ksmj"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+            </RelativeLayout>
+            
+        </LinearLayout>
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="62dp"
+                android:layout_height="240dp" >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#ddd" />
+                
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="7dp"
+                    android:background="#ddd" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|center_vertical"
+                    android:text="实际登记销售面积" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="129dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="与上年同期比(%)" />
+                            
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/djYearbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="129dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_alignParentRight="true"
+                              android:layout_centerVertical="true"
+                              android:gravity="center|center_vertical"
+                              android:text="当月与上月环比增长(%)" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/djMonthbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+                 <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="60dp" >
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="90dp" >
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:background="#ddd" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="9dp"
+                            android:background="#ddd" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center|center_vertical"
+                            android:text="预售" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_alignParentTop="true" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="69dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="同期比(%)" />
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="#ddd" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/djystb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:gravity="center"
+                                android:text="TextView"
+                                android:textSize="@dimen/fonts_16" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#ddd" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="#ddd" />
+                    </RelativeLayout>
+					<RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="30dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="69dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="环比(%)" />
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="#ddd" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/djyshb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:gravity="center"
+                                android:text="TextView"
+                                android:textSize="@dimen/fonts_16" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#ddd" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="#ddd" />
+                    </RelativeLayout>
+				<RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="60dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="69dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true" >
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="#ddd" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/djys"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:gravity="center"
+                                android:text="TextView"
+                                android:textSize="@dimen/fonts_16" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="#ddd" />
+                    </RelativeLayout>
+					<View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#ddd" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="150dp" >
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="90dp"
+                         >
+                        
+                        <View
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#ddd" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:background="#ddd" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center|center_vertical"
+                            android:text="现售" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_alignParentTop="true" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="69dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="同期比(%)" />
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="#ddd" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/djxstb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:gravity="center"
+                                android:text="TextView"
+                                android:textSize="@dimen/fonts_16" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#ddd" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="#ddd" />
+                    </RelativeLayout>
+					<RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="30dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="69dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:text="环比(%)" />
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="#ddd" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/djxshb"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:gravity="center"
+                                android:text="TextView"
+                                android:textSize="@dimen/fonts_16" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#ddd" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="#ddd" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="60dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="60dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:orientation="horizontal" >
+
+                            <RelativeLayout
+                                android:layout_width="69dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentLeft="true" >
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:background="#ddd" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/djxs"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:gravity="center"
+                                android:text="TextView"
+                                android:textSize="@dimen/fonts_16" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="#ddd" />
+                    </RelativeLayout>
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:background="#ddd" />
+
+                    </RelativeLayout>
+            </RelativeLayout>
+            
+        </LinearLayout>
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="120dp" >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#ddd" />
+                
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="7dp"
+                    android:background="#ddd" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center|center_vertical"
+                    android:layout_marginTop="26dp"
+                    android:text="批准预(销)售面积" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="与上年同期比(%)" />
+                            
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/jjYearbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center|center_vertical"
+                                android:text="当月与上月环比增长(%)" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/jjMonthbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="60dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/jj"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+            </RelativeLayout>
+            
+        </LinearLayout>
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,116 @@
+package com.dxsoft.houseApp.activity;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.dxsoft.houseApp.fragment.ReportBaseFragment;
+import com.dxsoft.houseApp.fragment.StatisticFragment;
+import com.example.houseapp.R;
+
+public class MainActivity extends FragmentActivity implements OnClickListener {
+
+	private final String TAG = this.getClass().getName();
+
+	private boolean flag = false;
+	private Button statisticBtn;
+	private Button reportBaseBtn;
+	private Button preferenceBtn;
+	private int curBtn;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		initView();
+		setListener();
+	}
+
+	private void initView() {
+		statisticBtn = (Button) this.findViewById(R.id.btn_statistic);
+		reportBaseBtn = (Button) this.findViewById(R.id.btn_reportbase);
+		preferenceBtn = (Button) this.findViewById(R.id.btn_preference);
+		FragmentTransaction tran = this.getSupportFragmentManager().beginTransaction();
+		curFragment = new StatisticFragment();
+		curBtn = R.id.btn_statistic;
+		tran.add(R.id.fl_content, curFragment, StatisticFragment.tagName);
+		tran.commit();
+	}
+
+	private void setListener() {
+		statisticBtn.setOnClickListener(this);
+		reportBaseBtn.setOnClickListener(this);
+		preferenceBtn.setOnClickListener(this);
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+			if (flag) {
+				android.os.Process.killProcess(android.os.Process.myPid());
+			} else {
+				Toast.makeText(this, "再按一次将退出程序", Toast.LENGTH_SHORT).show();
+				flag = true;
+			}
+		}
+		return false;
+	}
+
+	private Fragment curFragment = null;
+
+	@Override
+	public void onClick(View view) {
+		FragmentManager fm = this.getSupportFragmentManager();
+		FragmentTransaction tran = fm.beginTransaction();
+		switch (view.getId()) {
+		case R.id.btn_statistic:
+			if (curBtn != R.id.btn_statistic) {
+				Fragment f = fm.findFragmentByTag(StatisticFragment.tagName);
+				if (f == null) {
+					f = new StatisticFragment();
+					tran.add(R.id.fl_content, f, StatisticFragment.tagName);
+				} else {
+					tran.hide(curFragment);
+					tran.show(f);
+				}
+				statisticBtn.setTextColor(getResources().getColor(R.color.white));
+				reportBaseBtn.setTextColor(getResources().getColor(R.color.white));//颜色待定
+				curFragment = f;
+			}
+			break;
+		case R.id.btn_reportbase:
+			if (curBtn != R.id.btn_reportbase) {
+				Fragment f = fm.findFragmentByTag(ReportBaseFragment.tagName);
+				if (f == null) {
+					f = new ReportBaseFragment();
+					tran.add(R.id.fl_content, f, ReportBaseFragment.tagName);
+				} else {
+					tran.hide(curFragment);
+					tran.show(f);
+				}
+				statisticBtn.setTextColor(getResources().getColor(R.color.white));
+				reportBaseBtn.setTextColor(getResources().getColor(R.color.white));
+				curFragment = f;
+			}
+			break;
+		case R.id.btn_preference:
+			if (curBtn != R.id.btn_preference) {
+
+			}
+			break;
+		default:
+			break;
+		}
+		curBtn = view.getId();
+		tran.commit();
+
+	}
+}

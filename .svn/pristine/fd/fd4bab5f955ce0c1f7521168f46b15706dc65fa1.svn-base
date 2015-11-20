@@ -1,0 +1,107 @@
+package com.dxsoft.houseApp.fragment;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.PagerTabStrip;
+import android.support.v4.view.PagerTitleStrip;
+import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.example.houseapp.R;
+import com.zxing.activity.CaptureActivity;
+
+public class ReportBaseFragment extends Fragment {
+	public static String tagName = "ReportBaseFragment";
+	private final String TAG = this.getClass().getName();
+	private TextView qrcodeBtn;
+	
+	 /**
+     * 作为页面容器的ViewPager 
+     */  
+	private ViewPager viewPager;
+    
+    private PagerTitleStrip pagerTitleStrip;	//viewpager的标题
+	private PagerTabStrip pagerTabStrip;		//一个viewpager的指示器，效果就是一个横的粗的下划线
+	private List<String> titleList = new ArrayList<String>();			//viewpager的标题
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+	}
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		
+		View rootView = inflater.inflate(R.layout.fragment_reportbase, container, false);
+		qrcodeBtn = (TextView) rootView.findViewById(R.id.tv_qrcode);
+		qrcodeBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(ReportBaseFragment.this.getActivity(), CaptureActivity.class);
+				startActivityForResult(intent, 0);
+			}
+		});
+		
+		viewPager = (ViewPager) rootView.findViewById(R.id.pager);
+		pagerTabStrip = (PagerTabStrip) rootView.findViewById(R.id.pagertab);
+		pagerTabStrip.setTabIndicatorColor(this.getResources().getColor(R.color.green));
+//		pagerTitleStrip = (PagerTitleStrip) this.findViewById(R.id.pagertitle);
+//		pagerTitleStrip.setTextColor(this.getResources().getColor(R.color.green));
+		FragmentManager fm = this.getActivity().getSupportFragmentManager();
+		final List<Fragment> fragmentList = new ArrayList<Fragment>();
+		titleList.add("我创建的报表");
+		titleList.add("他人共享的报表");
+		fragmentList.add(new CreatedReportBaseFragment());
+		fragmentList.add(new ShareReportBaseFragment());
+		FragmentStatePagerAdapter fspa = new FragmentStatePagerAdapter(fm) {
+			
+			@Override
+			public int getCount() {
+				return fragmentList.size();
+			}
+			
+			@Override
+			public Fragment getItem(int position) {
+				return fragmentList.get(position);
+			}
+			
+			@Override
+			public CharSequence getPageTitle(int position) {
+				return titleList.get(position);
+			}
+		};
+		
+		viewPager.setAdapter(fspa);
+		return rootView;
+	}
+	
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+	}
+	
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		Log.i(TAG, "----");
+		if (requestCode == Activity.RESULT_OK) {
+			String result = data.getExtras().getString("result");
+			Log.i(TAG, result + "----");
+		}
+	}
+}

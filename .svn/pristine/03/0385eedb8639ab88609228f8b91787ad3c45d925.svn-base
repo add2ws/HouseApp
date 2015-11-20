@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.houseapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ 	<uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_small"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.dxsoft.houseApp.activity.MainActivity" android:screenOrientation="portrait">
+            
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.MenuListActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.MenuListDetailActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.HouseTradeStatistic" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.PersonActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.House_ksActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.ZhuzhaiTypeActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.ZhuzhaiActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.ZhuzhaiAreaActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.ZhuzhaiTaoPriceActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.TablegyqkActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.TableksqkActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.TablexsjgActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.TablexsqkActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.module.FqxsylbActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.HouseSellTotalStatistic" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.ReportBaseActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.ReportBasePreviewActivity" >
+        </activity>
+        <activity android:name="com.dxsoft.houseApp.activity.AddReportActivity" >
+        </activity>
+        
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+    </application>
+
+</manifest>

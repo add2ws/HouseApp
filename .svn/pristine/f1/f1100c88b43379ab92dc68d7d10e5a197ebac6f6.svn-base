@@ -1,0 +1,262 @@
+package com.dxsoft.houseApp.activity;
+
+import java.io.IOException;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.dxsoft.houseApp.base.C;
+import com.dxsoft.houseApp.base.HouseConfig;
+import com.dxsoft.houseApp.data.HouseSharePreference;
+import com.dxsoft.houseApp.entity.Parameter;
+import com.dxsoft.houseApp.util.HouseUtil;
+import com.dxsoft.houseApp.util.HttpHelper;
+import com.dxsoft.houseApp.util.ViewUtil;
+import com.example.houseapp.R;
+
+
+public class LoginActivity extends Activity {
+	private Button login;
+	private EditText username, passwd;
+	private CheckBox rememberbox, autologinbox;
+	private String login_name,login_pw;
+	private boolean flag=false;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.login);
+		initView();
+		setLinstener();
+		
+	}
+	/**
+	 * 设置监听
+	 */
+	private void setLinstener() {
+		//记住密码监听
+		rememberbox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if(isChecked){
+					HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISREMBER, true);
+				}else{
+					HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISREMBER, false);
+				}
+			}
+		});
+		//自动登陆
+		autologinbox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if(isChecked){
+					rememberbox.setChecked(true);
+					HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISAUTOLOGIN, true);
+				}else{
+					HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISAUTOLOGIN, false);
+				}
+			}
+		});
+		login.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				login();
+			}
+		});
+	}
+	//登陆
+		protected void login(){
+
+			//判断当前网络是否有可用
+			if(!HouseUtil.isNetworkAvailable(LoginActivity.this)){
+				Toast.makeText(LoginActivity.this, "当前网络不可用,请检查您的网络连接！", Toast.LENGTH_LONG).show();
+				return;
+			}
+			login_name = username.getText().toString().trim();
+			login_pw = passwd.getText().toString().trim();
+			if(autologinbox.isChecked()){
+				HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISAUTOLOGIN, true);
+			}else{
+				HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISAUTOLOGIN, false);
+			}
+			if(rememberbox.isChecked()){
+				HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISREMBER, true);
+			}else{
+				HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISREMBER, false);
+			}
+			
+			if("".equals(login_name)){
+				Toast.makeText(LoginActivity.this, "请输入账号！", Toast.LENGTH_SHORT).show();
+			}else if("".equals(login_pw)){
+				Toast.makeText(LoginActivity.this, "请输入密码！", Toast.LENGTH_SHORT).show();	
+			}else{
+				new LoadHouseTask().execute("1");
+			}
+			
+		}
+	class LoadHouseTask extends AsyncTask<String, Void, String> {
+		private String url = "";
+		private Dialog mDialog;
+		
+		/**
+		 * 当任务执行之前开始调用此方法，可以在这里显示进度对话框
+		 */
+		@Override
+		protected void onPreExecute() {
+			mDialog = ViewUtil.showWaitingView(LoginActivity.this, "正在登录...");
+			super.onPreExecute();
+		}
+		/**
+		 * 显示任务执行的进度
+		 */
+		@Override
+		protected void onProgressUpdate(Void... values) {
+			super.onProgressUpdate(values);
+		}
+		/**
+		 * 发送请求：后台执行方法
+		 */
+		@Override
+		protected String doInBackground(String... params) {
+			Parameter userInfo = new Parameter();
+			userInfo.setUsername(login_name);
+			userInfo.setPasswd(login_pw);
+			String r = "";
+			try {
+				r = HttpHelper.requestData(HouseConfig.METHOD_LOGIN, C.Url, userInfo);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return r;
+		}
+		
+		/**
+		 * 处理请求返回结果
+		 * @String result
+		 */
+		@Override
+		protected void onPostExecute(String result) {
+
+			if (TextUtils.isEmpty(result)) {
+				
+				 if(mDialog != null){
+					 mDialog.dismiss();
+				 }
+				Toast.makeText(LoginActivity.this, "网络错误，请检查您的网络连接！",Toast.LENGTH_SHORT).show();
+				return;
+			} else {
+				try {
+					JSONObject success = new JSONObject(result);
+					if ("true".equals(success.getString("success"))) {
+						Toast.makeText(LoginActivity.this, "登录成功！",Toast.LENGTH_SHORT).show();
+						String userSid = success.getJSONObject("data").getString("sid");
+						HouseSharePreference.putStringData(LoginActivity.this,HouseConfig.KEY_USERSID,userSid);
+						HouseSharePreference.putStringData(LoginActivity.this, HouseConfig.KEY_NAME,login_name);
+						HouseSharePreference.putStringData(LoginActivity.this, HouseConfig.KEY_PASSWORD,login_pw);
+
+						if (autologinbox.isChecked()) {
+							HouseSharePreference.putStringData(LoginActivity.this,HouseConfig.KEY_NAME, login_name);
+							HouseSharePreference.putStringData(LoginActivity.this,HouseConfig.KEY_PASSWORD, login_pw);
+						}
+
+						if (rememberbox.isChecked()) {
+							HouseSharePreference.putStringData(LoginActivity.this,HouseConfig.KEY_NAME, login_name);
+							HouseSharePreference.putStringData(LoginActivity.this,HouseConfig.KEY_PASSWORD, login_pw);
+						}
+
+						if (HouseSharePreference.getBooleanData(LoginActivity.this, HouseConfig.KEY_ISREMBER)) {
+							HouseSharePreference.putStringData(LoginActivity.this,HouseConfig.KEY_NAME, login_name);
+							HouseSharePreference.putStringData(LoginActivity.this,HouseConfig.KEY_PASSWORD, login_pw);
+						}
+
+						HouseSharePreference.putBooleanData(LoginActivity.this, HouseConfig.KEY_ISLOGIN,true);
+
+						 if(mDialog != null){
+							 mDialog.dismiss();
+						 }
+						Intent inte = new Intent();
+						inte.setClass(LoginActivity.this, MainActivity.class);
+						startActivity(inte);
+						finish();
+						//在startActivity（）或finish（）后调用该方法实现页面动画效果 如：淡入淡出效果或由左向右滑入效果
+						overridePendingTransition(R.anim.slide_right_in,R.anim.slide_left_out);
+
+					} else {
+						 if(mDialog != null){
+							 mDialog.dismiss();
+						 }
+						Toast.makeText(LoginActivity.this, success.getString("message"),
+								Toast.LENGTH_SHORT).show();
+					}
+
+				} catch (JSONException e) {
+
+					 if(mDialog != null){
+						 mDialog.dismiss();
+					 }
+					Toast.makeText(LoginActivity.this, "用户名或密码错误！",
+							Toast.LENGTH_SHORT).show();
+					e.printStackTrace();
+				}
+
+			}
+		
+			super.onPostExecute(result);
+		}
+		
+	}
+	/**
+	 * 初始化界面
+	 */
+	private void initView() {
+		
+		login = (Button)findViewById(R.id.login);
+		username = (EditText)findViewById(R.id.username);
+		passwd = (EditText)findViewById(R.id.password);
+		rememberbox = (CheckBox)findViewById(R.id.rememberpw);
+		autologinbox = (CheckBox)findViewById(R.id.autologin);
+		if(HouseSharePreference.getBooleanData(LoginActivity.this, HouseConfig.KEY_ISREMBER)){
+			rememberbox.setChecked(true);
+			username.setText(HouseSharePreference.getStringData(LoginActivity.this, HouseConfig.KEY_NAME));
+			passwd.setText(HouseSharePreference.getStringData(LoginActivity.this, HouseConfig.KEY_PASSWORD));
+		}
+		
+		if(HouseSharePreference.getBooleanData(LoginActivity.this, HouseConfig.KEY_ISAUTOLOGIN)){
+			autologinbox.setChecked(true);
+			rememberbox.setChecked(true);
+			//自动登陆
+			login();
+		}
+	}
+	//监听返回键
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0){
+			if(flag){
+				android.os.Process.killProcess(android.os.Process.myPid());
+			}else{
+				Toast.makeText(this, "再按一次将退出程序", Toast.LENGTH_SHORT).show();
+				flag = true;
+			}
+		}
+		return false;
+	}
+}

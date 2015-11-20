@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/title_bg" >
+
+        <RelativeLayout
+            android:id="@+id/housebacklayout"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_press_style"
+            android:paddingLeft="2dp" >
+
+            <ImageView
+                android:id="@+id/houseback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/goback_press_style" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:paddingLeft="30dp" 
+            android:gravity="center"
+            android:ellipsize="end"
+            android:text=""
+            android:textSize="@dimen/fonts_18"
+            android:textColor="@color/title_font_bg" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:paddingTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+            
+			
+			<EditText
+	            android:id="@+id/et_text"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		        android:layout_toRightOf="@+id/city"
+		        android:clickable="false"
+		        android:focusable="false"
+		        />
+
+			<TextView
+			    android:id="@+id/city"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    android:layout_marginLeft="23dp"
+			    android:text="统计地区"
+			    android:textColor="@color/title_bg" />
+            
+        </RelativeLayout>
+        
+        
+		<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+            
+			<EditText
+			    android:id="@+id/et_text_type"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dp"
+			    android:layout_toRightOf="@+id/city_type"
+			    android:clickable="false"
+			    android:ems="10"
+			    android:focusable="false" />
+
+			<TextView
+			    android:id="@+id/city_type"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignBaseline="@+id/et_text_type"
+			    android:layout_alignBottom="@+id/et_text_type"
+			    android:layout_alignParentLeft="true"
+			    android:layout_marginLeft="23dp"
+			    android:text="房屋用途"
+			    android:textColor="@color/title_bg" />
+            
+        </RelativeLayout>
+		
+		<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+			
+			<EditText
+			    android:id="@+id/startDate"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginLeft="10dp"
+			    android:layout_toRightOf="@+id/startDate_1"
+			    android:clickable="false"
+			    android:ems="10"
+			    android:focusable="false" />
+
+			<TextView
+			    android:id="@+id/startDate_1"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_centerVertical="true"
+			    android:layout_marginLeft="23dp"
+			    android:text="开始日期"
+			    android:textColor="@color/title_bg" />
+            
+        </RelativeLayout>
+		
+		<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:padding="5dp" >
+			
+			<Button
+			    android:id="@+id/chaxun"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:layout_alignParentTop="true"
+			    android:background="@drawable/btn_click_style1"
+			    android:focusable="false"
+			    android:layout_marginLeft="85dp"
+			    android:text="查询" />
+			
+		</RelativeLayout>
+ 		<ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF" >
+        </ListView>
+
+	</LinearLayout>
+</LinearLayout>

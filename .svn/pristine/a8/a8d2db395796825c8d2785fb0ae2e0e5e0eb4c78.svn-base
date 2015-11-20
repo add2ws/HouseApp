@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="fill_parent"
+  	 	android:layout_height="fill_parent"
+  		android:orientation="vertical">
+    
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </FrameLayout>
+       
+	<LinearLayout 
+        android:id="@+id/menuview_bottom"
+        android:layout_width="match_parent"
+  	    android:layout_height="wrap_content"
+  	    android:orientation="horizontal"
+  	    android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_statistic"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_click_style"
+            android:drawableTop="@drawable/clf"
+            android:paddingTop="5dp"
+            android:text="统计与监测"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fonts_14" />
+  	    <Button
+            android:id="@+id/btn_reportbase"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_click_style"
+            android:drawableTop="@drawable/spf"
+            android:paddingTop="5dp"
+            android:text="报表仓库"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fonts_14" 
+            />
+        
+  	    <Button
+            android:id="@+id/btn_preference"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_click_style"
+            android:drawableTop="@drawable/person"
+            android:paddingTop="5dp"
+            android:text="个人中心"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fonts_14" 
+            />
+        
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    >
+	
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/title_bg" >
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/spf"
+                android:scaleType="centerInside" />
+        
+        <TextView
+            android:id="@+id/tv_fqxs_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="报表仓库"
+            android:textSize="@dimen/fonts_20"
+            android:textColor="@color/title_font_bg" />
+	
+        <RelativeLayout 
+            android:id="@+id/rl_qrcode"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_press_style"
+            >
+	        <ImageView
+	                android:layout_width="23dp"
+	                android:layout_height="23dp"
+	                android:layout_centerInParent="true"
+	                android:background="@drawable/sm"
+	                android:scaleType="centerInside" />
+            
+        </RelativeLayout>
+        
+        <TextView 
+            android:id="@+id/tv_qrcode"
+			android:layout_width="40dp"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:text="扫"
+			android:textColor="@color/white"
+			android:gravity="center"
+			android:visibility="gone"
+            />
+    </RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="10dp"
+		 android:id="@+id/pager"
+		 android:layout_width="match_parent" 
+		 android:layout_height="match_parent" >
+		 <!-- 
+		 
+        <android.support.v4.view.PagerTitleStrip 
+            android:id="@+id/pagertitle"
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"/>
+		  -->
+        
+        <android.support.v4.view.PagerTabStrip  
+            android:id="@+id/pagertab"
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"/>
+        
+        
+	 </android.support.v4.view.ViewPager>
+    
+    
+</LinearLayout>

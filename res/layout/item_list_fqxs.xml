@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+    <TextView
+        android:id="@+id/tv_xzqhmc"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/fonts_16"
+        android:textColor="@color/green"
+        android:text="淮南市区"
+        />
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="135dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView 
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:paddingRight="10dp"
+		            android:textSize="@dimen/fonts_16"
+		            android:text="结转可售"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/tv_jzks"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="135dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:paddingRight="10dp"
+		            android:textSize="@dimen/fonts_16"
+		            android:text="其中新增可售"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/tv_xzks"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff" />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="135dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="实际销售量"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/tv_sjxsl"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="135dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="实售与可售比"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/tv_tsssyksb"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    
+	<View 
+        android:background="#ddd"
+		android:layout_height="1dp"
+		android:layout_width="match_parent"/>
+
+</LinearLayout>

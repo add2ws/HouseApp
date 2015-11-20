@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <FrameLayout 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        
+        <RelativeLayout 
+	        android:id="@+id/rl_loading"
+            android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+        	android:visibility="gone"
+            >
+
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                />
+            
+        </RelativeLayout>
+        
+	    <TextView
+	        android:id="@+id/tv_more"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:text="点击加载更多"
+	        android:gravity="center"
+	        android:textSize="18sp"
+	        android:textColor="#555"
+	        android:visibility="visible"
+	        />
+        
+    </FrameLayout>
+</LinearLayout>

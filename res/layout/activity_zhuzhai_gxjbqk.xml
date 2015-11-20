@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/title_bg" >
+        
+		<RelativeLayout
+            android:id="@+id/backlayout"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp" 
+            android:background="@drawable/btn_press_style">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/goback_press_style" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_fqxs_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:text="商品房供需基本情况表"
+            android:textSize="@dimen/fonts_20"
+            android:textColor="@color/title_font_bg" />
+
+    </RelativeLayout>
+	
+    <LinearLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:layout_marginTop="20dp"
+	    android:orientation="horizontal" >
+        
+        <TextView 
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="选择月份："
+            android:textColor="@color/title_font_color"
+            android:textSize="@dimen/fonts_18"
+            />
+        <EditText 
+            android:id="@+id/editText1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:inputType="date"
+            android:background="@drawable/edittext_rounded"
+            />
+        
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="15dp"
+	    android:orientation="horizontal" >
+        
+        <View 
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            />
+        <Button 
+            android:id="@+id/chaxun"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/btn_click_style1"
+            android:textColor="#fff"
+            android:textSize="@dimen/fonts_18"
+            android:text="@string/query_button_name"
+            />
+        
+    </LinearLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <View 
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#ddd"
+        />
+    <View 
+        android:layout_height="15dp"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        />
+    <View 
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="#ddd"
+        />
+   	<ListView
+        android:id="@+id/lv_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        >
+    </ListView>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="60dp"
+	    >
+	    
+	    <TextView
+	        android:id="@+id/tv_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="8dp"
+	        android:text="全市商品房销售价格一览表"
+			android:textSize="@dimen/fonts_16"
+	        />
+	    
+	    <TextView
+	        android:id="@+id/tv_createtime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="8dp"
+	        android:text="创建时间： 2015-09-12 13:21:57"
+	        android:textSize="@dimen/fonts_12"
+	        android:textColor="@color/title_font_color"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        />
+		
+	    <RelativeLayout 
+	        android:layout_width="50dp"
+	        android:layout_height="match_parent"
+	        android:layout_alignParentRight="true"
+	        >
+		    <ImageView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/icon6"
+		        android:layout_centerInParent="true"
+		        />	    
+	        
+	    </RelativeLayout>
+	    
+	    
+	</RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <TextView
+        android:id="@+id/quyu"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/fonts_16"
+        android:textColor="@color/green"
+        android:text="淮南市"
+        />
+     
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+            
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true" >
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="#ddd" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="78.5dp"
+                    android:background="#ddd" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/view2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:text="住宅类" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="29dp"
+                    android:text="非住宅类" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="均价(元/㎡)" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/zzjj"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="40dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="同比(%)" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/zzjjtb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="80dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="均价(元/㎡)" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/fzzjj"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="120dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignLeft="@+id/view1"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:layout_width="131dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true" >
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="同比(%)" />
+                            <View 
+                                android:layout_height="match_parent"
+                                android:layout_width="1dp"
+                                android:layout_alignParentRight="true"
+                                android:background="#ddd"
+                                />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/fzzjjtb"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textSize="@dimen/fonts_16" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="#ddd" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="#ddd" />
+                </RelativeLayout>
+            </RelativeLayout>
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+    </RelativeLayout>
+     
+	<View 
+        android:background="#ddd"
+		android:layout_height="1dp"
+		android:layout_width="match_parent"/>
+
+</LinearLayout>

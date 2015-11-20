@@ -1,0 +1,188 @@
+package com.dxsoft.houseApp.activity;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.dxsoft.houseApp.base.C;
+import com.dxsoft.houseApp.base.HouseConfig;
+import com.dxsoft.houseApp.entity.Parameter;
+import com.dxsoft.houseApp.util.HttpHelper;
+import com.dxsoft.houseApp.util.ViewUtil;
+import com.dxsoft.houseApp.R;
+
+public class MenuListDetailActivity extends Activity {
+	
+
+	private ListView listView;
+	private Integer usersid;
+	private String itemid;
+	private String listname;
+	private RelativeLayout backlayout;
+	private TextView title;
+	
+	List<HashMap<String,Object>> list=new ArrayList<HashMap<String,Object>>();
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+//		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.menulistdetail);
+		initView();
+	}
+
+	private void initView() {
+		
+		Intent intent = this.getIntent();
+		usersid = intent.getIntExtra(HouseConfig.KEY_USERSID, -1);
+		itemid = intent.getStringExtra(HouseConfig.KEY_ITEMID);
+		listname=intent.getStringExtra(HouseConfig.KEY_TITLE);
+		listView=(ListView) findViewById(R.id.listViewdetail);
+		backlayout=(RelativeLayout) findViewById(R.id.backlayout);
+		
+		title=(TextView) findViewById(R.id.title);
+		title.setText(listname);
+//		title.setTextSize(30/value);
+		
+		setLinstener();
+		new MenuItemListDetail().execute("1");
+	}
+	private void setLinstener() {
+		backlayout.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				finish();
+				overridePendingTransition(R.anim.slide_left_in,R.anim.slide_right_out);
+			}
+		});
+	}
+	class MenuItemListDetail extends AsyncTask<String, Void, String>{
+		private String url = "";
+		private Dialog mDialog;
+		@Override
+		protected String doInBackground(String... params) {
+			Parameter queryEntity = new Parameter();
+			queryEntity.setUserSid(usersid);
+			queryEntity.setpSid(Integer.valueOf(itemid));
+			url = HttpHelper.getUrl(HouseConfig.METHOD_MENUITEMLIST, C.Url, queryEntity);
+			return HttpHelper.getWebData(url);
+		}
+		@Override
+		protected void onPostExecute(String result) {
+			try {
+				JSONObject success = new JSONObject(result);
+				if(success.getBoolean("success")&&!success.getString("data").equals("[]")){
+					if(mDialog!=null){
+						mDialog.dismiss();
+					}
+					JSONArray jsonArray = success.getJSONArray("data");
+					for(int i=0;i<jsonArray.length();i++){
+						HashMap<String,Object> map=new HashMap<String,Object>();
+						JSONObject jsonObject = jsonArray.getJSONObject(i);
+						String sid = jsonObject.get("sid").toString();					
+						String name = jsonObject.get("name").toString();
+						String address=jsonObject.get("address").toString();
+						int sortId;
+						try {
+							sortId = jsonObject.getInt("sortId");
+						} catch (JSONException e) {
+							sortId = 999;
+						}
+						map.put("id", sid);
+						map.put("listName", name);
+						map.put("address", address);
+						map.put("img_menu_end", R.drawable.arrow);
+						map.put("sortId", sortId);
+						list.add(map);
+					}
+					Collections.sort(list, new Comparator<Map<String, Object>>() {
+
+						@Override
+						public int compare(Map<String, Object> a, Map<String, Object> b) {
+							
+							return (Integer) a.get("sortId") - (Integer) b.get("sortId");
+						}
+					});
+					SimpleAdapter sa=new SimpleAdapter(MenuListDetailActivity.this, list, R.layout.menuitem, new String[]{"listName","img_menu_end"}, new int[]{R.id.listName,R.id.img_menu_end});
+					listView.setAdapter(sa);
+					listView.setOnItemClickListener(new OnItemClickListener() {
+						
+						@Override
+						public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+							
+							String listName = list.get(arg2).get("listName").toString();
+							String address = list.get(arg2).get("address").toString();
+							try {
+								if(address==null||address.equals("")){
+									Toast.makeText(MenuListDetailActivity.this, R.string.invalid_menu, Toast.LENGTH_SHORT).show();
+									return ;
+								}
+								Intent intent = new Intent(MenuListDetailActivity.this,Class.forName(address));
+								intent.putExtra(HouseConfig.KEY_TITLE, listName);
+								MenuListDetailActivity.this.startActivity(intent);
+								overridePendingTransition(R.anim.slide_right_in,R.anim.slide_left_out);
+							} catch (ClassNotFoundException e) {
+								Toast.makeText(MenuListDetailActivity.this, R.string.invalid_menu, Toast.LENGTH_SHORT).show();
+								e.printStackTrace();
+							}
+						}
+					});
+				}else{
+					if(mDialog!=null){
+						mDialog.dismiss();
+					}
+					Toast.makeText(MenuListDetailActivity.this, R.string.no_query_data, Toast.LENGTH_SHORT).show();
+				}
+			} catch (JSONException e) {
+				if(mDialog!=null){
+					mDialog.dismiss();
+				}
+				e.printStackTrace();
+			}
+			
+			super.onPostExecute(result);
+		}
+		@Override
+		protected void onPreExecute() {
+			mDialog = ViewUtil.showWaitingView(MenuListDetailActivity.this, "正在加载...");
+			super.onPreExecute();
+		}
+	}
+	
+	/**
+	 * 返回上一级
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if(keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0){
+			Intent intent = new Intent();
+			setResult(RESULT_OK, intent);
+			finish();
+			overridePendingTransition(R.anim.slide_left_in,R.anim.slide_right_out);
+		}
+		return false;
+	}
+}

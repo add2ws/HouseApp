@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<LinearLayout
+	    android:id="@+id/linearLayout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:orientation="vertical" >
+
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp" >
+
+	        <TextView
+	            android:id="@+id/list_year_zhi"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:text="TextView"
+	            android:textColor="#008800" />
+	    </RelativeLayout>
+
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/view1"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/area"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="总面积" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+         android:background="#F8F8FF"
+        android:layout_toRightOf="@+id/relativeLayout1" >
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/view1"
+            android:layout_below="@+id/view10"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/list_area_zhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42dp"
+            android:text="TextView" />
+
+    </RelativeLayout>
+
+	</RelativeLayout>
+	
+	
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/view8"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/view8"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/view12"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view9"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/cover"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/cover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="总套数" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/relativeLayout2"
+        android:background="#F8F8FF" >
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/view9"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="30dp"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/list_num_zhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42dp"
+            android:text="TextView" />
+
+    </RelativeLayout>
+
+	</RelativeLayout>
+	
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout21"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <View
+            android:id="@+id/view61"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/view81"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view71"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/view81"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/view121"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view81"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view91"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/money"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="住宅面积" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayout21"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/relativeLayout21"
+        android:background="#F8F8FF" >
+
+        <View
+            android:id="@+id/view101"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/view91"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view111"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="30dp"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view121"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/zhuzhai_area_zhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42dp"
+            android:text="TextView" />
+
+
+    </RelativeLayout>
+
+	</RelativeLayout>
+	
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout22"
+        android:layout_width="81dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <View
+            android:id="@+id/view62"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/view82"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view72"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/view82"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/view122"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view82"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view92"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/average"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="住宅套数" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayout22"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/relativeLayout22"
+        android:background="#F8F8FF" >
+
+        <View
+            android:id="@+id/view102"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/view92"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view112"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="30dp"
+            android:background="#dddddd" />
+
+        <View
+            android:id="@+id/view122"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="#dddddd" />
+
+        <TextView
+            android:id="@+id/zhuzhai_room_zhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42dp"
+            android:text="TextView" />
+
+    </RelativeLayout>
+
+	</RelativeLayout>
+	</LinearLayout>
+
+</RelativeLayout>

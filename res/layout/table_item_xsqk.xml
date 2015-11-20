@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+    <TextView
+        android:id="@+id/buildingType"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/fonts_16"
+        android:textColor="@color/green"
+        android:text="全市"
+        />
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:paddingRight="10dp"
+		            android:text="当月销售面积(m²)"
+		            android:textSize="@dimen/fonts_16" />
+
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzmj"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:paddingRight="10dp"
+		            android:textSize="@dimen/fonts_16"
+		            android:text="全年累计(m²)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzljmj"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff" />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="同比(%)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzmjtb"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="当月销售套数(套)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzts"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="全年累计(套)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzljts"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="同比(%)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zztstb"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="当月销售金额(万元)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzzj"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="全年累计(万元)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzljzj"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="同比(%)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzzjtb"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="销售均价(元/m²)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzjj"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            
+	        <RelativeLayout
+	            android:layout_width="175dp"
+	            android:layout_height="match_parent"
+	            android:layout_alignParentLeft="true"
+	            >
+	            
+		        <TextView
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:gravity="right|center_vertical"
+		            android:textSize="@dimen/fonts_16"
+		            android:paddingRight="10dp"
+		            android:text="同比(%)"
+		            />
+		        <View 
+		            android:background="#ddd"
+					android:layout_height="match_parent"
+					android:layout_alignParentRight="true"
+					android:layout_width="1dp"/>
+	        
+	        </RelativeLayout>
+	        
+	        
+	         <TextView
+	            android:id="@+id/zzjjtb"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:textSize="@dimen/fonts_16"
+	            android:background="#fff"
+	            android:paddingLeft="10dp"
+	            android:gravity="left|center_vertical"
+	            />
+            
+        </LinearLayout>
+        
+        
+        <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_width="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_width="match_parent"
+			android:layout_alignParentTop="true"
+			android:layout_height="1dp"/>
+        
+         <View 
+            android:background="#ddd"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:layout_width="1dp"/>
+        
+    </RelativeLayout>
+    
+	<View 
+        android:background="#ddd"
+		android:layout_height="1dp"
+		android:layout_width="match_parent"/>
+
+</LinearLayout>

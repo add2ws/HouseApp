@@ -1,0 +1,108 @@
+package com.dxsoft.houseApp.activity;
+
+import java.io.IOException;
+
+import com.dxsoft.houseApp.base.C;
+import com.dxsoft.houseApp.base.HouseConfig;
+import com.dxsoft.houseApp.entity.Parameter;
+import com.dxsoft.houseApp.util.HttpHelper;
+import com.example.houseapp.R;
+
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.app.Activity;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class DemoActivity extends Activity {
+	private String TAG = this.getClass().getName();
+	
+	private EditText userNameEdit;
+	private Button reqDataBtn;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		initData();
+		initView();
+		setListener();
+	}
+	
+	//初始化数据
+	private void initData() {
+		
+	}
+	
+	//初始化视图组件
+	private void initView() {
+		reqDataBtn = (Button) this.findViewById(R.id.btn_demo_reqData);
+		userNameEdit = (EditText) this.findViewById(R.id.et_demo_userName);
+	}
+	
+	//初始化事件监听器
+	private void setListener() {
+		reqDataBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Log.i(TAG, "点击了按钮");
+				
+				String content = userNameEdit.getText().toString();
+				if (TextUtils.isEmpty(content)) {
+					Toast.makeText(DemoActivity.this, "内容不能为空!", 3000).show();
+					return;
+				}
+				
+				Parameter p = new Parameter();
+				p.setUsername(content);
+				new DemoAsync().execute(p);
+			}
+		});
+		
+	}
+	
+	//异步类(主要用于请求数据)
+	class DemoAsync extends AsyncTask<Parameter, Void, String> {
+		
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			
+		}
+
+		@Override
+		protected String doInBackground(Parameter... param) {
+			String result = null;
+			try {
+				result = HttpHelper.requestData(HouseConfig.METHOD_LOGIN, C.Url, param[0]);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return result;
+		}
+		
+		@Override
+		protected void onPostExecute(String result) {
+			super.onPostExecute(result);
+			
+			Toast.makeText(DemoActivity.this, result, 3000).show();
+		}
+	}
+	
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}
